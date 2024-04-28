@@ -17,7 +17,6 @@ public class Main {
 
     }
 
-
     /* https://www.codewars.com/kata/5865918c6b569962950002a1/train/java */
     public static int strCount(String str, char letter) {
         int count = 0;
@@ -28,7 +27,6 @@ public class Main {
         }
         return count;
     }
-
 
     /*
     https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/java
