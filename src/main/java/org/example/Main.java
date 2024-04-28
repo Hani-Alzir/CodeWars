@@ -91,7 +91,6 @@ public class Main {
         scanner.close();
     }
 
-
     private static void math() { // some practice
         // Create a Scanner object to read input from the user
         Scanner scanner = new Scanner(System.in);
