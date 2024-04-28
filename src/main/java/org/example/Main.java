@@ -18,8 +18,7 @@ public class Main {
     }
 
 
-    // https://www.codewars.com/kata/5865918c6b569962950002a1/train/java
-
+    /* https://www.codewars.com/kata/5865918c6b569962950002a1/train/java */
     public static int strCount(String str, char letter) {
         int count = 0;
         for (int i = 0; i < str.length(); i++) {
@@ -29,9 +28,11 @@ public class Main {
         }
         return count;
     }
-    //https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/java
-    // for some reason it is not passing in codewars cuz of double space
 
+    /*
+    https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/java
+     for some reason it is not passing in codewars cuz of double space
+    */
     public static String reverseWords(final String original) {
         String[] words = original.split(" ");
         StringBuilder reversedSentence = new StringBuilder();
@@ -63,7 +64,7 @@ public class Main {
         return input.replaceAll("(?i)" + targetWord, replacement);
     }
 
-    private static void stringReplace() {
+    private static void stringReplace() { // practice
         Scanner scanner = new Scanner(System.in);
 
         // Prompt the user to enter a string
@@ -90,7 +91,7 @@ public class Main {
     }
 
 
-    private static void math() {
+    private static void math() { // some practice
         // Create a Scanner object to read input from the user
         Scanner scanner = new Scanner(System.in);
 
