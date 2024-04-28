@@ -29,6 +29,7 @@ public class Main {
         return count;
     }
 
+
     /*
     https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/java
      for some reason it is not passing in codewars cuz of double space
