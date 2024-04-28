@@ -1,6 +1,5 @@
 package org.example;
 
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
@@ -13,13 +12,13 @@ public class Main {
         System.out.println(reverseWords("This reverse every word in a sentence"));
         System.out.println(reverseSentence("This to reverse the whole string"));
         //multiply();
-        System.out.println(strCount("hello", 'l'));
+        System.out.println(stringCount("hello", 'l'));
 
     }
 
 
     /* https://www.codewars.com/kata/5865918c6b569962950002a1/train/java */
-    public static int strCount(String str, char letter) {
+    public static int stringCount(String str, char letter) {
         int count = 0;
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) == letter) {
@@ -74,8 +73,8 @@ public class Main {
 
         // Define a list of word pairs to replace
         String[][] replacements = {
-                { "hani", "name" },
-                { "hello", "welcome" }
+                {"hani", "name"},
+                {"hello", "welcome"}
                 // Add more word pairs as needed
         };
 

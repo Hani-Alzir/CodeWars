@@ -2,18 +2,19 @@ package org.example.Tests;
 
 import org.example.Main;
 import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 
 public class SolutionTest {
     @Test
-    public void testSomething() {
-        assertEquals(1, Main.strCount("Hello", 'o'));
-        assertEquals(2, Main.strCount("Hello", 'l'));
-        assertEquals(0, Main.strCount("",'z'));
+    public void testStringCount() {
+        assertEquals(1, Main.stringCount("Hello", 'o'));
+        assertEquals(2, Main.stringCount("Hello", 'l'));
+        assertEquals(0, Main.stringCount("", 'z'));
     }
 
     @Test
-    public void exampleCases() {
+    public void testReverseWords() {
         assertEquals("ehT kciuq nworb xof spmuj revo eht yzal .god", Main.reverseWords("The quick brown fox jumps over the lazy dog."));
         assertEquals("elppa", Main.reverseWords("apple"));
         assertEquals("a b c d", Main.reverseWords("a b c d"));
