@@ -134,4 +134,19 @@ public class Main {
         // Return a string of the number here!
         return String.valueOf(num);
     }
+
+    // https://www.codewars.com/kata/568dcc3c7f12767a62000038/train/java
+    public static boolean setAlarm(boolean employed, boolean vacation) {
+        // Your code here...
+        if (employed && vacation){
+            return false;
+        }else if (employed && !vacation){
+            return true;
+        }  else if (!employed && vacation){
+            return false;
+        }else if (!employed && !vacation){
+            return false;
+        }
+        return Boolean.parseBoolean(null); // what a stupid line huh haha
+    }
 }

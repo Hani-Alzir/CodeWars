@@ -4,6 +4,8 @@ import org.example.Main;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class SolutionTest {
     @Test
@@ -34,6 +36,14 @@ public class SolutionTest {
         assertEquals("67", Main.numberToString(67));
         assertEquals("123", Main.numberToString(123));
         assertEquals("999", Main.numberToString(999));
+    }
+
+    @Test
+    public void setAlarmTest() {
+        assertTrue("Should be true.", Main.setAlarm(true, false));
+        assertFalse("Should be false.", Main.setAlarm(true, true));
+        assertFalse("Should be false.", Main.setAlarm(false, false));
+        assertFalse("Should be false.", Main.setAlarm(false, true));
     }
 
 }
