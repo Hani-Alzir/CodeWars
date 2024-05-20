@@ -29,4 +29,11 @@ public class SolutionTest {
     //        assertEquals(String.valueOf(-15), Main.multiply(-3), "For number = -3");
     //    }
 
+    @Test
+    public void tests() {
+        assertEquals("67", Main.numberToString(67));
+        assertEquals("123", Main.numberToString(123));
+        assertEquals("999", Main.numberToString(999));
+    }
+
 }
