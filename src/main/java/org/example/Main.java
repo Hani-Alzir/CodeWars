@@ -154,4 +154,10 @@ public class Main {
     public static boolean hero(int bullets, int dragons) {
         return bullets >= 2 * dragons;
     }
+
+    // https://www.codewars.com/kata/5625618b1fe21ab49f00001f/train/java
+    public static String sayHello(String name) {
+
+        return "Hello, "+ "" + name;
+    }
 }
