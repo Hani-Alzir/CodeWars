@@ -149,4 +149,9 @@ public class Main {
         }
         return Boolean.parseBoolean(null); // what a stupid line huh haha
     }
+
+    // https://www.codewars.com/kata/59ca8246d751df55cc00014c/train/java
+    public static boolean hero(int bullets, int dragons) {
+        return bullets >= 2 * dragons;
+    }
 }

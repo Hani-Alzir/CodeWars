@@ -2,6 +2,7 @@ package org.example.Tests;
 
 import org.example.Main;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -44,6 +45,21 @@ public class SolutionTest {
         assertFalse("Should be false.", Main.setAlarm(true, true));
         assertFalse("Should be false.", Main.setAlarm(false, false));
         assertFalse("Should be false.", Main.setAlarm(false, true));
+    }
+
+
+    @Test @DisplayName("A true hero")
+    public void aTrueHero() {
+        assertTrue("With 10 bullets and 5 dragons", Main.hero(10, 5));
+        assertTrue("With 10g0 bullets and 40 dragons", Main.hero(100, 40));
+    }
+
+    @Test @DisplayName("A false hero")
+    public void aFalseHero() {
+        assertFalse("With 4 bullets and 5 dragons", Main.hero(4, 5));
+        assertFalse("With 1500 bullets and 751 dragons", Main.hero(1500, 751));
+        assertFalse("With 0 bullets and 1 dragon", Main.hero(0, 1));
+        assertFalse("With 7 bullets and 4 dragons", Main.hero(7, 4));
     }
 
 }
