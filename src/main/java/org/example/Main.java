@@ -73,8 +73,8 @@ public class Main {
 
         // Define a list of word pairs to replace
         String[][] replacements = {
-                {"hani", "name"},
-                {"hello", "welcome"}
+                { "hani", "name" },
+                { "hello", "welcome" }
                 // Add more word pairs as needed
         };
 
@@ -138,13 +138,13 @@ public class Main {
     // https://www.codewars.com/kata/568dcc3c7f12767a62000038/train/java
     public static boolean setAlarm(boolean employed, boolean vacation) {
         // Your code here...
-        if (employed && vacation){
+        if (employed && vacation) {
             return false;
-        }else if (employed && !vacation){
+        } else if (employed && !vacation) {
             return true;
-        }  else if (!employed && vacation){
+        } else if (!employed && vacation) {
             return false;
-        }else if (!employed && !vacation){
+        } else if (!employed && !vacation) {
             return false;
         }
         return Boolean.parseBoolean(null); // what a stupid line huh haha
@@ -159,5 +159,13 @@ public class Main {
     public static String sayHello(String name) {
 
         return "Hello, " + name;
+    }
+
+    //https://www.codewars.com/kata/5899dc03bc95b1bf1b0000ad/train/java
+    public static int[] invert(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = -array[i];
+        }
+        return array;
     }
 }

@@ -4,6 +4,8 @@ import org.example.Main;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -81,6 +83,26 @@ public class SolutionTest {
     public void test4() {
         assertEquals("Hello, Dr. McCoy",
                 Main.sayHello("Dr. McCoy"));
+    }
+
+    @Test
+    public void testSomething() {
+
+        int[] input = new int[] {-1,-2,-3,-4,-5};
+        int[] expected = new int[] {1,2,3,4,5};
+        assertEquals(Arrays.toString(expected), Arrays.toString(Main.invert(input)));
+
+        input = new int[] {-1,2,-3,4,-5};
+        expected = new int[] {1,-2,3,-4,5};
+        assertEquals(Arrays.toString(expected), Arrays.toString(Main.invert(input)));
+
+        input = new int[] {};
+        expected = new int[] {};
+        assertEquals(Arrays.toString(expected), Arrays.toString(Main.invert(input)));
+
+        input = new int[] {0};
+        expected = new int[] {0};
+        assertEquals(Arrays.toString(expected), Arrays.toString(Main.invert(input)));
     }
 
 }
