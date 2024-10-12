@@ -1,18 +1,36 @@
 package org.example;
 
+import java.io.File;
+import java.text.DateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        math();
-        stringReplace();
-        System.out.println(reverseWords("This reverse every word in a sentence"));
-        System.out.println(reverseSentence("This to reverse the whole string"));
-        //multiply();
-        System.out.println(stringCount("hello", 'l'));
+        File file = new File("yeloxys-woerel");
+
+        howMuchILoveYou(1);
+
+        int startOfCountry = file.getName().indexOf("-");
+        startOfCountry++;
+        int endOfCountry = file.getName().indexOf("_");
+        //String country = file.getName().substring(startOfCountry, endOfCountry);
+       // System.out.println(startOfCountry);
+        //System.out.println(endOfCountry);
+        //System.out.println(country);
+
+//        math();
+//        stringReplace();
+//        System.out.println(reverseWords("This reverse every word in a sentence"));
+//        System.out.println(reverseSentence("This to reverse the whole string"));
+//        //multiply();
+//        System.out.println(stringCount("hello", 'l'));
 
     }
 
@@ -168,4 +186,29 @@ public class Main {
         }
         return array;
     }
+
+    //https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9/train/java
+        public static List<String> number(List<String> lines) {
+            for (int i = 0; i < lines.size(); i++) {
+                lines = Collections.singletonList(1 + ": " + lines.get(i));
+            }
+            return lines;
+        }
+
+    //https://www.codewars.com/kata/56d6c333c9ae3fc32800070f/train/java
+    public static String daysInTheYear(int year) {
+        year = DateFormat.FULL;
+
+        return String.valueOf(year);
+    }
+
+
+    // https://www.codewars.com/kata/57f24e6a18e9fad8eb000296/train/java
+    public static String howMuchILoveYou(int nb_petals) {
+
+        List<String> strings = Arrays.asList("I love you", "a little", "a lot", "passionately", "madly", "not at all");
+        strings = Collections.singletonList(strings.get(nb_petals));
+        return strings.get((nb_petals - 1) % strings.size());
+    }
+
 }

@@ -9,6 +9,7 @@ import java.util.Arrays;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 public class SolutionTest {
     @Test
@@ -104,5 +105,34 @@ public class SolutionTest {
         expected = new int[] {0};
         assertEquals(Arrays.toString(expected), Arrays.toString(Main.invert(input)));
     }
+
+    @Test
+    public void basicTests() {
+        assertIterableEquals(Arrays.asList(), Main.number(Arrays.asList()));
+        assertIterableEquals(Arrays.asList("1: a", "2: b", "3: c"), Main.number(Arrays.asList("a", "b", "c")));
+        assertIterableEquals(Arrays.asList("1: ", "2: ", "3: ", "4: ", "5: "), Main.number(Arrays.asList("", "", "", "", "")));
+    }
+
+
+    @Test @DisplayName("Should return leap years")
+    public void shouldReturnLeapYears() {
+        assertEquals("0 has 366 days", Main.daysInTheYear(0), "year = 0");
+        assertEquals("-64 has 366 days", Main.daysInTheYear(-64), "year = -64");
+        // Add more test cases by yourself
+    }
+
+    @Test @DisplayName("Should return normal years")
+    public void shouldReturnNormalYears() {
+        assertEquals("1974 has 365 days", Main.daysInTheYear(1974), "year = 1974");
+        assertEquals("-10 has 365 days", Main.daysInTheYear(-10), "year = -10");
+        // Add more test cases by yourself
+    }
+
+        @Test
+        public void test11() {
+            assertEquals("I love you", Main.howMuchILoveYou(1));
+            assertEquals("a little", Main.howMuchILoveYou(2));
+            assertEquals("not at all", Main.howMuchILoveYou(6));
+        }
 
 }
